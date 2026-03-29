@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User profile</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #434343;
+            line-height: 1.5;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-image: url(../photo/User-profile.png);
+            width: 390px;
+            height: 844px;
+            margin: auto;
+
+            display: flex;
+            flex-direction: column;
+
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .card2 {
+            padding: 0 27.5px;
+            padding-bottom: 300px;
+            margin-top:130px;
+            background-color: #ffffff;
+            border-radius: 50px;
+        }
+
+        .card2 .form-input:focus,
+        .card2 .form-select:focus {
+            outline: none;
+            background-color: #D9D9D9;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-bottom: 5px;
+        }
+
+        .form-input,
+        .form-select {
+            width: 100%;
+            padding: 18px 0;
+            border-radius: 20px;
+            border: none;
+            font-size: 0.9rem;
+            background-color: #D9D9D9;
+        }
+
+        .form-input {
+            margin-top: 11px;
+            box-shadow: 5px 5px 12px rgb(113, 112, 112);
+        }
+
+        .form-label {
+            font-weight: 600;
+        }
+
+        .card2 .form-input:hover {
+            outline: 2px solid #5877ff;
+        }
+
+        .image{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-top: -100px;
+            margin-bottom: 40px;
+        }
+
+        .undo-image{
+            
+            padding: 0 14px;
+            margin-top: 56px;
+
+            /* background-color: #5877ff; */
+        }
+
+
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="undo-image">
+                <a href="main-manu.html"><img src="photo/Undo.png" alt="Photo"></a>
+            </div>
+
+            <div class="card2">
+                <div class="image">
+                    <img src="photo/Ellipse 9.png" alt="Photo">
+                </div>
+
+                <form action="" method="">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fname" class="form-label">Name</label>
+                            <input type="text" id="fname" name="fname" placeholder="ใส่ชื่อของคุณ " class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label"> Email</label>
+                            <input type="email" id="femail" name="femail" placeholder="example@email.com"
+                                class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label"> Delivery address</label>
+                            <input type="email" id="faddress" name="faddress" placeholder="Address" class="form-input">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

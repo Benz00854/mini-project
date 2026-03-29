@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #434343;
+            line-height: 1.5;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .screen {
+            background-color: #ffffff;
+            width: 390px;
+            height: 844px;
+            margin: auto;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bar {
+            width: 406px;
+            margin-bottom: 18px;
+
+            position: relative;
+            right: 18px;
+        }
+
+        .card {
+            width: 100%;
+
+            flex-grow: 1;
+            /* ยืดพื้นที่ให้เต็มจอที่เหลือจากแถบ Status Bar */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-bottom: 55px;
+        }
+
+        .bill {
+            background-color: #e6e6e6;
+            box-shadow: 5px 4px 8.6px rgb(96, 95, 95);
+
+            width: 342px;
+            height: 398px;
+
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .success-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .return-home{
+           position:relative;
+           top: 70px;
+
+           color:#00520F;
+           font-weight: 600;
+           text-decoration: none;
+           transition: all 0.3s ease;
+        }
+
+        .return-home:hover {
+            transform: scale(0.95);
+        }
+
+        .status-text{
+            font-size: 1.5rem;
+            font-weight: 700;
+
+            margin-top: 23px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="screen">
+        <div class="icon-wrapper">
+            <img src="photo/Status Bar.png" alt="" class="bar">
+        </div>
+        <div class="card">
+            <div class="bill">
+                <div>
+                    <img src="photo/Frame 4.png" alt="">
+                </div>
+
+                <div class="success-content">
+                    <span class="status-text" >ชำระเงินสำเร็จ</span>
+                    <span class="order-id">Order id: #12345678</span>
+                </div>
+                <a href="main-manu.html" class="return-home">Return to home</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

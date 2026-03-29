@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User profile</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #434343;
+            line-height: 1.5;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .screen {
+            background-color: #FFFBF1;
+            width: 390px;
+            height: auto;
+            margin: auto;
+        }
+
+
+        .header-image {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 0 12px;
+
+        }
+
+        .profile img {
+            width: 47px;
+            height: 47px;
+        }
+
+        .logo img {
+            height: 65px;
+        }
+
+        .form-input {
+            width: 325px;
+            font-size: 0.9rem;
+            background-color: #ffffff;
+            box-shadow: 3px 3px 10px rgba(143, 142, 142, 0.583);
+
+            padding: 13px 18px;
+            margin-bottom: 48px;
+            border-radius: 999px;
+
+            outline: none;
+            border: none;
+        }
+
+        .form-input:focus {
+            outline: 2px solid gray;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* =========================================================================================== */
+        /* HAMBURGER LIST */
+        /* =========================================================================================== */
+
+        .small-card {
+            background-color: #ffffff;
+
+            width: 165px;
+            height: 225px;
+
+            margin: 10px 0;
+            padding-left: 5px;
+            border-radius: 12px;
+            box-shadow: 5px 5px 12px rgb(96, 95, 95);
+        }
+
+        .small-card:hover {
+            border: 3px solid #0055ff;
+            box-shadow: 0px 0px 12px #0055ff;
+        }
+
+
+        .menu {
+            margin: 0 10px 50px 0;
+            padding-bottom: 40px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            /* จัดกลางแนวนอน */
+            align-items: center;
+
+        }
+
+        .image {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-drink {
+            width: 155px;
+            height: 117px;
+            margin: 13px;
+        }
+
+        .menu-title,
+        a {
+            margin: 0;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            font-size: 13px;
+
+            text-decoration: none;
+            color: black;
+        }
+
+        span {
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        .menu-description {
+            font-size: 10px;
+            margin: 0;
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ============================================================================================ */
+
+
+        footer {
+            position: fixed;
+            bottom: 0px;
+
+            max-width: 390px;
+            width: 100%;
+        }
+
+        .box-foot {
+            background-color: #B23C0E;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-items: center;
+
+            padding: 16px 0 15px 0;
+        }
+
+        .icon {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container">
+        <div class="screen">
+            <div class="status-bar">
+                <img src="photo/Status Bar.png" alt="Photo">
+            </div>
+
+            <div class="header-image">
+                <div class="logo">
+                    <img src="photo/LOGO.png" alt="Photo">
+                </div>
+
+                <div class="profile">
+                    <a href="User-profile.html"><img src="photo/Ellipse 9.png" alt="Photo"></a>
+                </div>
+            </div>
+
+            <form action="">
+                <div class="form-group">
+
+                    <input type="text" id="fsearch" name="fsearch" placeholder="Search" class="form-input">
+                </div>
+            </form>
+
+
+            <div class="menu">
+                <div class="small-card">
+                    <a class="menu-title" href="">
+                        <div class="image">
+                            <img class="image-drink" src="photo/other/burger1-6.png" alt="">
+                        </div>
+                        <article>
+                            <a href="">french fries</a>
+                            <span>39.-</span>
+                            <p class="menu-description">เน้นความสดใหม่ของผักและเนื้อ</p>
+                        </article>
+                    </a>
+                </div>
+
+                <div class="small-card">
+                    <a class="menu-title" href="">
+                        <div class="image">
+                            <img class="image-drink" src="photo/other/burger1-3.png" alt="">
+                        </div>
+                        <article>
+                            <a href="">nugget</a>
+                            <span>60.-</span>
+                            <p class="menu-description">กรอบนอกนุ่มใน</p>
+                        </article>
+                    </a>
+                </div>
+
+                <div class="small-card">
+                    <a class="menu-title" href="">
+                        <div class="image">
+                            <img class="image-drink" src="photo/other/burger1-2.png" alt="">
+                        </div>
+                        <article>
+                            <a href="">Fried Chicken Drumsticks</a>
+                            <span>89.-</span>
+                            <p class="menu-description">หนังไก่กรอบ ร้อนๆ</p>
+                        </article>
+                    </a>
+                </div>
+
+                <div class="small-card">
+                    <a class="menu-title" href="">
+                        <div class="image">
+                            <img class="image-drink" src="photo/other/burger1-5.png" alt="">
+                        </div>
+                        <article>
+                            <a href="">fried onions</a>
+                            <span>59.-</span>
+                            <p class="menu-description">หัวหอมทอดกรอบ</p>
+                        </article>
+                    </a>
+                </div>
+
+                <div class="small-card">
+                    <a class="menu-title" href="">
+                        <div class="image">
+                            <img class="image-drink" src="photo/other/burger1-1.png" alt="">
+                        </div>
+                        <article>
+                            <a href="">Shrimp Donutss</a>
+                            <span>25.-</span>
+                            <p class="menu-description">โดนัทกุ้ง เนื้อกุ้งเน้นๆ</p>
+                        </article>
+                    </a>
+                </div>
+
+                <div class="small-card">
+                    <a class="menu-title" href="">
+                        <div class="image">
+                            <img class="image-drink" src="photo/other/burger1-4.png" alt="">
+                        </div>
+                        <article>
+                            <a href="">Egg Tart </a>
+                            <span>25.-</span>
+                            <p class="menu-description">ทาร์ตไข่หน้าไหม้ เนื้อนุ่นกรอบ</p>
+                        </article>
+                    </a>
+                </div>
+
+            </div>
+
+            <footer>
+                <div class="box-foot">
+                    <a class="icon" href=""><img src="photo/Home Page.png" alt=""></a>
+                    <a class="icon" href=""><img src="photo/Voucher.png" alt=""></a>
+                    <a class="icon" href=""><img src="photo/Heart.png" alt=""></a>
+                    <a class="icon" href=""><img src="photo/Messaging.png" alt=""></a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>

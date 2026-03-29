@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main-menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: "Kanit", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #434343;
+            line-height: 1.5;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .app-wrapper {
+            width: 390px;
+            height: 844px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            background-color: #FFFBF1;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+
+        /* ================ Header ================ */
+        .header-top-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 12px;
+        }
+
+        .profile img {
+            width: 47px;
+            height: 47px;
+        }
+
+        .logo img {
+            height: 65px;
+        }
+        
+        .search-input {
+            width: 325px;
+            font-size: 0.9rem;
+            background-color: #ffffff;
+            box-shadow: 3px 3px 10px rgba(157, 157, 157, 0.5);
+            padding: 13px 18px;
+            margin-bottom: 10px;
+            border-radius: 999px;
+            outline: none;
+            border: none;
+        }
+
+        .search-input:focus {
+            outline: 2px solid gray;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* ================ Hero Banner ================ */
+        .hot-menu-badge {
+            display: flex;
+            margin-left: 9px;
+            padding: 10px;
+            height: 20px;
+            width: max-content;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px 20px 0 0;
+            color: #ffffff;
+            background-color: #f74040;
+            transition: all 0.2s ease;
+        }
+        
+        .hot-menu-badge:hover {
+            padding-bottom: 13px;
+            background-color: #d73737;
+            cursor: pointer;
+            transform: scaleZ(-3px);
+        }
+
+        .hot-menu-badge h2 {
+            font-size: 0.95rem;
+        }
+
+        .hero-banner {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            margin-top: -10px;
+        }
+
+        .hero-banner img {
+            width: 90%;
+            height: auto;
+            padding: 0 10px;
+            background: linear-gradient(135deg, #1A1A1A, #2d2d2d);
+            box-shadow: 0 8px 20px rgba(157, 157, 157, 0.4);
+            border-radius: 0 10px 10px 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .hero-banner img:hover {
+            border-radius: 10px;
+            transform: scale(1.03);
+        }
+
+        /* ================ Categories Section ================ */
+        .category-grid {
+            display: grid;
+            width: 360px;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .category-grid > :last-child {
+            grid-column: 1 / -1;
+            padding: 10px 0;
+        }
+
+        .category-card {
+            display: flex;
+            width: 100%;
+            height: 70px;
+            flex-direction: column;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(117, 117, 117, 0.4);
+            background-color: #ffffff;
+            color: #ffffff;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .category-card.category-burger {
+            padding-top: 30px;
+            background-color: #ffa64c;
+        }
+
+        .category-card.category-drink {
+            padding-top: 30px;
+            background-color: #ffc654;
+        }
+
+        .category-card.category-other {
+            padding-top: 30px;
+            background-color: #ffe031;
+        }
+
+        .category-card.category-promotion {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #ff5454;
+        }
+
+        .category-card.category-burger:hover {
+            color: #222222;
+            background-color: #ff8b43;
+            box-shadow: 0 8px 20px rgba(98, 43, 0, 0.4);
+            transform: translateY(-3px);
+        }
+        .category-card.category-drink:hover {
+            color: #222222;
+            background-color: #ffbe3b;
+            box-shadow: 0 8px 20px rgba(98, 43, 0, 0.4);
+            transform: translateY(-3px);
+        }
+        .category-card.category-other:hover {
+            color: #222222;
+            background-color: #f3d321;
+            box-shadow: 0 8px 20px rgba(98, 43, 0, 0.4);
+            transform: translateY(-3px);
+        }
+        .category-card.category-promotion:hover {
+            color: #222222;
+            background-color: #ff4646;
+            box-shadow: 0 8px 20px rgba(98, 43, 0, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .category-card.category-burger:active    {transform: scale(0.96);}
+        .category-card.category-drink:active     {transform: scale(0.96);}
+        .category-card.category-other:active     {transform: scale(0.96);}
+        .category-card.category-promotion:active {transform: scale(0.96);}
+
+
+        /* ================ Footer ================ */
+        footer {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn-nav {
+            position: fixed;
+            bottom: 0;
+            width: 390px;
+            background-color: #6b422a;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        .nav-item {
+            color: #ffffff;
+            font-size: 28px;
+            text-decoration: none;
+            filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.6));
+            transition: transform 0.2s ease;
+        }
+
+        .nav-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .nav-item:active {
+            transform: scale(0.96);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="app-wrapper">
+<!-- ==================== Header ==================== -->
+            <header>
+                <img src="photo/Status Bar.png" alt="img_png">
+                <div class="header-top-row">
+                    <div class="logo">
+                        <img src="photo/LOGO.png" alt="Photo">
+                    </div>
+                    <div class="profile">
+                        <a href="User-profile.html"><img src="photo/Ellipse 9.png" alt="Photo"></a>
+                    </div>
+                </div>
+                <form action="">
+                    <div class="search-container">
+                        <input type="text" id="search-box" name="search-box" placeholder="Search" class="search-input">
+                    </div>
+                </form>
+            </header>
+<!-- ==================== Hero banner ==================== -->
+            <div>
+                <!-- =========== badge =========== -->
+                <a class="hot-menu-badge">
+                    <h2>HOT MENU</h2>
+                </a>
+                <!-- =========== banner =========== -->
+                <div class="hero-banner">
+                    <img src="photo/Hamburger/Screenshot_2026-03-04_150659-removebg-preview 2-4.png" alt="">
+                </div>
+            </div>
+<!-- ==================== Categories section ==================== -->
+            <div>
+                <div class="category-grid">
+                    <!-- =========== burger =========== -->
+                    <a href="menu-burger.html">
+                        <div class="category-card category-burger">
+                            <i class="fas fa-hamburger fa-2xl"></i>
+                            <p style="color: #222222;"> เบอร์เกอร์</p>
+                        </div>
+                    </a>
+                    <!-- =========== drink =========== -->
+                    <a href="menu-drink.html" class="category-card category-drink">
+                        <i class="fas fa-glass-martini-alt fa-2xl"></i>
+                        <p style="color: #222222;"> เครื่องดื่ม</p>
+                    </a>
+                    <!-- =========== other =========== -->
+                    <a href="menu-other.html" class="category-card category-other">
+                        <i class="fas fa-utensils fa-2xl"></i>
+                        <p style="color: #222222;"> เมนูอื่นๆ</p>
+                    </a>
+                    <!-- =========== pomotion =========== -->
+                    <a href="promotion.html" class="category-card category-promotion">
+                        <i class="fa-solid fa-ticket fa-2xl"></i>
+                    </a>
+                </div>
+            </div>
+<!-- ==================== Footer ==================== -->
+            <footer>
+                <nav class="btn-nav">
+                    <!-- =========== nav =========== -->
+                    <a href="main-manu.html" class="nav-item"><i class="fas fa-home"></i></a>
+                    <a href="promotion.html" class="nav-item"><i class="fas fa-ticket-alt"></i></a> 
+                    <a href="favorites.html" class="nav-item"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="nav-item"><i class="fas fa-comments"></i></a>
+                </nav>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

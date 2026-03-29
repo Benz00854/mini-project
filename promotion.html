@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Kanit", sans-serif;
+        }
+
+        body {
+            background-color: #434343;
+            display: flex;
+            justify-content: center;
+            line-height: 1.5;
+        }
+
+        .app-wrapper {
+            width: 390px;
+            height: 844px;
+            background-color: #FFFDF4;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ================ Header ================ */
+        .header {
+            width: 100%;
+            padding: 20px;
+            padding-top: 40px;
+        }
+
+        .btn-back {
+            font-size: 22px;
+            color: #333;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-back:hover {
+            transform: translateX(-5px);
+            color: #FF7B00;
+        }
+
+        /* ================ Promo Banners ================ */
+        .promo-container {
+            flex: 1;
+            padding: 0 20px;
+            padding-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .promo-card {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            height: 140px;
+            position: relative;
+            overflow: hidden;
+            
+            border-radius: 16px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            color: white;
+            
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .promo-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .card-black {background: linear-gradient(135deg, #1A1A1A, #2d2d2d);}
+        .card-red {background: linear-gradient(135deg, #D31010, #ff2626);}
+        .card-yellow {background: linear-gradient(135deg, #F2B01E, #ffce5c); color: #1A1A1A;}
+
+        .promo-text {
+            z-index: 2;
+        }
+
+        .promo-text h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .promo-text p {
+            font-size: 14px;
+            font-weight: 400;
+        }
+        
+        .promo-img {
+            position: absolute;
+            height: 120%;
+            z-index: 1;
+        }
+
+        .img-right { right: -20px; top: -10%; }
+        .img-left { left: -30px; top: -10%; }
+
+        .text-right {margin-left: auto;text-align: right;}
+
+        /* ================ Floating Button ================ */
+        .floating-btn-container {
+            position: absolute;
+            bottom: 170px; /* ลอยอยู่เหนือ Navbar */
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .btn-green {
+            background-color: #319259;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 15px 40px;
+            border-radius: 30px;
+            border: none;
+            box-shadow: 0 4px 15px rgba(110, 178, 138, 0.4);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-green:active {
+            transform: scale(0.95);
+        }
+
+        /* ================ Bottom Navbar ================ */
+        footer {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn-nav {
+            position: fixed;
+            bottom: 0;
+            width: 390px;
+            background-color: #6b422a;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        .nav-item {
+            color: #ffffff;
+            font-size: 28px;
+            text-decoration: none;
+            filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.6));
+            transition: all 0.2s ease;
+        }
+
+        .nav-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .nav-item:active {
+            transform: scale(0.96);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="app-wrapper">
+        
+        <img src="img/status-barlight.png" alt="">
+        <div class="header">
+            <a href="main-manu.html" class="btn-back"><i class="fas fa-undo-alt"></i></a>
+        </div>
+
+        <div class="promo-container">
+            
+            <div class="promo-card card-black">
+                <div class="promo-text">
+                    <h2>หิวมั้ย?</h2>
+                    <p>รับส่วนลดไปเลย 100.-</p>
+                </div>
+                <img src="photo/Hamburger/Screenshot_2026-03-04_150659-removebg-preview 2-4.png" alt="Burger" class="promo-img img-right">
+            </div>
+
+            <div class="promo-card card-red">
+                <img src="photo/Hamburger/Screenshot_2026-03-04_150659-removebg-preview 2-5.png" alt="Burger" class="promo-img img-left">
+                <div class="promo-text text-right">
+                    <h2>ลดแรง 50%<br>ครั้งแรก!!</h2>
+                </div>
+            </div>
+
+            <div class="promo-card card-yellow">
+                <div class="promo-text">
+                    <h2>ดีลเด็ดเฉพาะคุณ!<br>ลดสูงสุด 50%</h2>
+                    <p style="font-size: 10px; margin-top: 10px;">30 มีนาคม 69 ถึง 14 เมษายน 69</p>
+                </div>
+                <img src="photo/Hamburger/Screenshot_2026-03-04_150659-removebg-preview 2-6.png" alt="Burger" class="promo-img img-right">
+            </div>
+
+        </div>
+
+        <div class="floating-btn-container">
+            <a href="promotion2.html" class="btn-green">รวมโค้ดส่วนลด</a>
+        </div>
+
+        <footer>
+            <nav class="btn-nav">
+                <!-- =========== nav =========== -->
+                <a href="main-manu.html" class="nav-item"><i class="fas fa-home"></i></a>
+                <a href="promotion.html" class="nav-item"><i class="fas fa-ticket-alt"></i></a> 
+                <a href="favorites.html" class="nav-item"><i class="fas fa-heart"></i></a>
+                <a href="#" class="nav-item"><i class="fas fa-comments"></i></a>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>

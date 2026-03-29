@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #434343;
+            line-height: 1.5;
+            letter-spacing: 1px;
+        }
+
+        .container{
+            max-width: 1200px;
+            width: 100%;
+
+            margin: 0 auto;
+        }
+
+        .card{
+            background-image:url(photo/Home.png);
+            width: 390px;
+            height: 844px;
+            margin: auto;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .image{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 36px 70px;
+        }
+
+        .btn-on{
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            font-size: 24px;
+            text-align: center;
+
+            padding: 8px 16px;
+        }
+        .btn{
+            display: grid;
+            grid-template-columns: 1fr ;
+            gap: 10px;
+
+            margin: 38px 16px;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            font-size: 24px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+
+
+<!-- ============================================================================================================== -->
+<body>
+    <div class="container"> 
+        <div class="card"> 
+                <div class="image">
+                    <img src="photo/LOGO.png" alt="Logo Photo">
+                </div>
+                <div class="btn">
+                    <a href="Login.html"  class="btn-on">Login</a>
+                    <a href="register.html"  class="btn-on">Register</a>
+                </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #434343;
+            line-height: 1.5;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+
+            margin: 0 auto;
+            ;
+        }
+
+        .bg-image {
+            position: fixed;
+            
+            width: 400px;
+            height: 800px;
+            z-index: -1;
+        }
+
+        .card {
+            background-image:url(photo/);
+            width: 390px;
+            height: 844px;
+            margin: auto;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 70px;
+            padding-top:36px;
+        }
+
+        .login-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+
+            margin:0 16px;
+            margin-top: 16px;
+
+        }
+
+        .login-flex{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            gap: 16px;
+        }
+
+        .form-field{
+            background-color: rgb(255, 255, 255);
+            border: 2px solid #00000010;
+            border-radius: 10px;
+            font-size: 24px;
+
+            width: 350px;
+            height: 50px;
+
+            display: flex;
+            align-items: center;
+        }
+        .form-label{
+            margin: 0 8px;
+            font-weight: 600;
+            padding: 16px;
+        }
+
+        .btn-primary {
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            font-size: 24px;
+
+            width: 358px;
+            height: 50px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn-actions {
+            margin-top:18px ;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            gap: 16px;
+        }
+
+        .btn.btn-primary{
+            background-color: #834A41;
+            color: #FFB861;
+        }
+
+        .separator-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+
+            margin: 0;
+        }
+        
+        a{
+            text-decoration: none;
+            color: black;
+            font-weight:600;
+        }
+
+        .auth-message{
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .register-link{
+            color: #707BD7;
+            font-size: 26px;
+            text-decoration: underline;
+        }
+        .register-flex{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div>
+                <img src="photo/Status Bar.png" alt="status bar">
+            </div>
+            <div class="image">
+                <img src="photo/LOGO.png" alt="Photo">
+            </div>
+
+            <div class="login-container">
+                <div class="login-image">
+                    <img src="photo/Register (1).png" alt="Photo">
+                </div>
+                <div class="login-flex">
+                    <div class="form-field">
+                        <p class="form-label">Username</p>
+                    </div>
+                    <div class="form-field">
+                        <p class="form-label">Gmail</p>
+                    </div>
+                    <div class="form-field">
+                        <p class="form-label">Password</p>
+                    </div>
+                    <div>
+                        <a href="Menu.html" class="btn btn-primary">LOGIN</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="register-flex">
+                <p class="auth-message">You are already logged in.</p>
+                <a href="Menu.html" class="register-link">Login</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

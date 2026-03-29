@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #434343;
+            line-height: 1.5;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 390px;
+            max-height: 844px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .screen {
+            background-color: #DDDDDD;
+            width: 390px;
+            height: 844px;
+            margin: auto;
+
+            display: flex;
+            flex-direction: column;
+
+            position: relative;
+            overflow: hidden;
+
+            object-fit: cover;
+        }
+
+        .bar {
+            width: 406px;
+            margin-bottom: 18px;
+
+            position: relative;
+            right: 18px;
+        }
+
+        /* ================================================================ */
+        .back-menu {
+            margin: 0 18px;
+            color: black;
+        }
+
+        /* ================================================================ */
+        span {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #949494;
+        }
+
+        .time {
+            color: black;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding-bottom: 11px;
+        }
+
+        .summary-item.l {
+            padding: 0;
+        }
+
+        .summary-title {
+            margin: 37px 0 18px 21px;
+        }
+
+        .summary-list,
+        .delivery-info {
+            margin: 0 37px;
+        }
+
+        .total-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin: 11px 37px 0 21px;
+            padding-top: 11px;
+
+            border-top: 1px solid #949494;
+        }
+
+        .delivery-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-top: 8px;
+        }
+
+        .delivery-text,
+        .delivery-time,
+        .total-amount {
+            color: black;
+        }
+
+        /* ============================================================ */
+        .payment-method-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #949494;
+
+            margin: 41px 0 18px 21px;
+        }
+
+        .payment-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+
+            padding: 0 12px;
+        }
+
+        .payment-option.kbank,
+        .payment-option.visa {
+            margin: 0 12px;
+            background-color: #0E8F33;
+            border-radius: 10px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .payment-option.visa {
+            margin: 0 12px;
+            background-color: #ffffff;
+        }
+
+        .visa-group {
+            margin: 0 12px;
+            padding-top: 9px;
+            background-color: #ffffff;
+            border-radius: 10px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .kbank-img,
+        .visa-img {
+            border-radius: 10px;
+            margin: 0 18px;
+        }
+
+        .visa-img {
+            margin: 0;
+        }
+
+        .method-choice {
+            margin: 0 26px;
+            font-size: 0.875rem;
+        }
+
+        /* ซ่อนcheckbox สี่เหลี่ยม */
+        .circle-check input {
+            display: none;
+        }
+
+        /* ทำเส้นขอบวงกลม */
+        .outer-ring,.outer-ring-visa {
+            display: inline-flex;
+            /*ตัวที่บอกให้จัดตำแหน่งitemด้านในขอบ*/
+            justify-content: center;
+            align-items: center;
+
+            width: 29px;
+            height: 29px;
+
+            border: 2px solid white;
+            border-radius: 50%;
+            /*ทำให้สี่เหลี่ยมเป็นวงกลม*/
+            margin: 0 19px 0 0;
+            transition: 0.2s;
+        }
+
+        .outer-ring-visa{
+             border: 2px solid rgb(0, 0, 0);
+        }
+
+        /* ทำวงกลมด้านใน */
+        .inner-dot,.inner-dot-visa {
+            width: 17px;
+            height: 17px;
+            background-color: #ffffff;
+            border-radius: 50%;
+
+            /*การย่อขนาด"dot"ให้หาย/ปรากฏไปเมื่อคลิ๊ก*/
+            transform: scale(0);
+            /*ย่อ*/
+            transition: transform 0.2s ease-in-out;
+            /*ทำให้ตอนปรากฏ มันเหมือนกำลังขยาย*/
+        }
+
+        .inner-dot-visa{
+            background-color: #000;
+        }
+
+        /*ตอนคลิ๊ก*/
+        .circle-check input:checked+.outer-ring .inner-dot,
+        .circle-check input:checked+.outer-ring-visa .inner-dot-visa {
+            transform: scale(1);
+            /*เมื่อติ๊กinput(วงกลม) dotจะขยายเป็นปกติ*/
+        }
+
+
+        footer {
+            position: relative;
+            bottom: -162px;
+
+            background-color: #ffffff;
+            box-shadow: 5px 6px 10px rgba(143, 142, 142, 0.583);
+            padding: 33px 37px;
+
+        }
+
+        .btn-pay {
+            padding: 10px 108px;
+            background-color: #0E8F33;
+            color: #ffffff;
+            border-radius: 10px;
+
+            font-size: 1.5rem;
+
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="screen">
+        <div>
+            <img src="photo/Status Bar.png" alt="" class="bar">
+        </div>
+
+        <div>
+            <a href="menu-burger.html" class="back-menu"><img src="photo/Undo-black.png" alt="Photo"></a>
+        </div>
+
+        <h3 class="summary-title">Order Summary</h3>
+        <div class="summary-list">
+            <div class="summary-item">
+                <span>Order</span>
+                <span>$8.24</span>
+            </div>
+            <div class="summary-item">
+                <span>Taxes</span>
+                <span>$0.3</span>
+            </div>
+            <div class="summary-item l">
+                <span>Delivery fees</span>
+                <span>$0.3</span>
+            </div>
+        </div>
+
+        <div class="details">
+            <div class="total">
+                <h3 class="total-title">Total :<span class="total-amount">$18.19</span></h3>
+            </div>
+
+            <div class="delivery-info">
+                <span class="delivery-text">Estimated derivery time</span>
+                <span class="delivery-time">5 - 15 mins</span>
+            </div>
+        </div>
+
+
+        <p class="payment-method-title">Select Payment method</p>
+
+        <div class="payment-list">
+            <div class="payment-option kbank">
+
+                <img class="kbank-img" src="photo/Screenshot 2026-03-04 195040 2.png" alt="">
+                <label class="circle-check">
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="option1">
+                        <span class="outer-ring">
+                            <span class="inner-dot"></span>
+                        </span>
+                    </div>
+                </label>
+            </div>
+
+            <div class="payment-option visa">
+                <div class="visa-group">
+                    <img class="visa-img" src="photo/Rectangle.png" alt="">
+                    <p class="method-choice">VISA Credit Card (**** 1234)</p>
+                </div>
+                <label class="circle-check">
+                    <div class="checkbox-item-visa">
+                        <input type="checkbox" name="option1">
+                        <span class="outer-ring-visa">
+                            <span class="inner-dot-visa"></span>
+                        </span>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <footer>
+            <a class="btn-pay">Pay Now</a>
+        </footer>
+
+    </div>
+
+
+
+</body>
+
+</html>

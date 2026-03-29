@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #434343;
+            line-height: 1.5;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .screen {
+            background-color: #FFFBF1;
+            width: 390px;
+            height: auto;
+            margin: auto;
+        }
+
+
+        .header-image {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 0 12px;
+
+        }
+
+        .profile img {
+            width: 47px;
+            height: 47px;
+        }
+
+        .logo img {
+            height: 65px;
+        }
+
+        .form-input {
+            width: 325px;
+            font-size: 0.9rem;
+            background-color: #ffffff;
+            box-shadow: 3px 3px 10px rgba(143, 142, 142, 0.583);
+
+            padding: 13px 18px;
+            margin-bottom: 48px;
+            border-radius: 999px;
+
+            outline: none;
+            border: none;
+        }
+
+        .form-input:focus {
+            outline: 2px solid gray;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* =========================================================================================== */
+        /* HAMBURGER LIST */
+        /* =========================================================================================== */
+
+        .small-card {
+            background-color: #ffffff;
+
+            width: 165px;
+            height: 225px;
+
+            margin: 10px 0;
+            padding-left: 5px;
+            border-radius: 12px;
+            box-shadow: 5px 5px 12px rgb(96, 95, 95);
+        }
+
+        .small-card:hover {
+            border: 3px solid #0055ff;
+            box-shadow: 0px 0px 12px #0055ff;
+        }
+
+
+        .menu {
+            margin: 0 10px 50px 0;
+            padding-bottom: 40px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            /* จัดกลางแนวนอน */
+            align-items: center;
+
+        }
+
+        .image {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-drink {
+            width: 155px;
+            height: 117px;
+            margin: 13px;
+        }
+
+        .menu-title,a{
+            margin: 0;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            font-size: 13px;
+
+            text-decoration: none;
+            color: black;
+        }
+
+        span {
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        .menu-description {
+            font-size: 10px;
+            margin: 0;
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+        }
+/* ============================================================================================ */
+
+        footer {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn-nav {
+            position: fixed;
+            bottom: 0;
+            width: 390px;
+            background-color: #6b422a;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        .nav-item {
+            color: #ffffff;
+            font-size: 28px;
+            text-decoration: none;
+            filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.6));
+            transition: transform 0.2s ease;
+        }
+
+        .nav-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .nav-item:active {
+            transform: scale(0.96);
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container">
+        <div class="screen">
+            <div class="status-bar">
+                <img src="photo/Status Bar.png" alt="Photo">
+            </div>
+
+            <div class="header-image">
+                <div class="logo">
+                    <img src="photo/LOGO.png" alt="Photo">
+                </div>
+
+                <div class="profile">
+                    <a href="User-profile.html"><img src="photo/Ellipse 9.png" alt="Photo"></a>
+                </div>
+            </div>
+
+            <form action="">
+                <div class="form-group">
+            
+                    <input type="text" id="fsearch" name="fsearch" placeholder="Search" class="form-input">
+                </div>
+            </form>
+
+
+            <div class="menu">
+                <div class="small-card">
+                    <a class="menu-title" href="">
+                        <div class="image">
+                            <img class="image-drink" src="photo/drink/burger1.png" alt="">
+                        </div>
+                        <article>
+                            <a href="">Coca-Colar</a>
+                            <span>40.-</span>
+                        </article>
+                    </a>
+                </div>
+
+                <div class="small-card">
+                    <a class="menu-title" href="">
+                        <div class="image">
+                            <img class="image-drink" src="photo/drink/burger1-10.png" alt="">
+                        </div>
+                        <article>
+                            <a href="">Pepsi</a>
+                            <span>40.-</span>
+                        </article>
+                    </a>
+                </div>
+
+                <div class="small-card">
+                    <a  class="menu-title" href="">
+                        <div class="image">
+                            <img class="image-drink" src="photo/drink/burger1-7.png" alt="">
+                        </div>
+                        <article>
+                            <a href="">orange fanta</a>
+                            <span>40.-</span>
+                        </article>
+                    </a>
+                </div>
+
+                <div class="small-card">
+                    <a  class="menu-title" href="">
+                        <div class="image">
+                            <img class="image-drink" src="photo/drink/burger1-6.png" alt="">
+                        </div>
+                        <article>
+                            <a href="">strawberry fanta</a>
+                            <span>40.-</span>
+                        </article>
+                    </a>
+                </div>
+
+                <div class="small-card">
+                    <a  class="menu-title" href="">
+                        <div class="image">
+                            <img class="image-drink" src="photo/drink/burger1-9.png" alt="">
+                        </div>
+                        <article>
+                            <a href="">Fruit Punch fanta</a>
+                            <span>40.-</span>
+                        </article>
+                    </a>
+                </div>
+
+                <div class="small-card">
+                    <a  class="menu-title" href="">
+                        <div class="image">
+                            <img class="image-drink" src="photo/drink/burger1-8.png" alt="">
+                        </div>
+                        <article>
+                            <a href="">Grape fanta</a>
+                            <span>40.-</span>
+                        </article>
+                    </a>
+                </div>
+
+                <div class="small-card">
+                    <a  class="menu-title" href="">
+                        <div class="image">
+                            <img class="image-drink" src="photo/drink/burger1-11.png" alt="">
+                        </div>
+                        <article>
+                            <a href="">Sprite</a>
+                            <span>40.-</span>
+                        </article>
+                    </a>
+                </div>
+
+                <div class="small-card">
+                    <a  class="menu-title" href="">
+                        <div class="image">
+                            <img class="image-drink" src="photo/drink/burger1-12.png" alt="">
+                        </div>
+                        <article>
+                            <a href="">ice</a>
+                            <span>40.-</span>
+                        </article>
+                    </a>
+                </div>
+            </div>
+
+<!-- ==================== Footer ==================== -->
+            <footer>
+                <nav class="btn-nav">
+                    <!-- =========== nav =========== -->
+                    <a href="main-manu.html" class="nav-item"><i class="fas fa-home"></i></a>
+                    <a href="#" class="nav-item"><i class="fas fa-ticket-alt"></i></a> 
+                    <a href="favorites.html" class="nav-item"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="nav-item"><i class="fas fa-comments"></i></a>
+                </nav>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>

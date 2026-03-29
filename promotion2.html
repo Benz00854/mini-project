@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: "Kanit", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #434343;
+            line-height: 1.5;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .screen {
+            background-color: #FFFBF1;
+            width: 390px;
+            height: 844px;
+            margin: auto;
+        }
+
+        /* ========== header ========= */
+
+        .btn-back {
+            margin-left: 30px;
+            font-size: 22px;
+            color: #333;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .btn-back:hover {
+            transform: translateX(-5px) scale(1.1); /* เลื่อนไปทางซ้ายนิดๆ เหมือนบอกว่ากลับไป */
+            color: #FF7B00;
+        }
+
+        .status-bar {
+            width: 406px;
+            margin-bottom: 18px;
+
+            position: relative;
+            right: 10px;
+        }
+
+
+
+        /* ============================================================================================ */
+
+footer {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn-nav {
+            position: fixed;
+            bottom: 0;
+            width: 390px;
+            background-color: #6b422a;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        .nav-item {
+            color: #ffffff;
+            font-size: 28px;
+            text-decoration: none;
+            filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.6));
+            transition: transform 0.2s ease;
+        }
+
+        .nav-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .nav-item:active {
+            transform: scale(0.96);
+        }
+
+        .voucher-item {
+            color: #ffffff;
+            background: linear-gradient(135deg, hsl(125, 82%, 56%), #6ced30);
+
+            display: flex;
+            align-items: center;
+
+            gap: 9px;
+
+            padding: 22px 13px;
+            margin: 0 23px 32px 23px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        h1{
+            margin: 43px 0 28px 23px;
+            text-shadow: 0 4px 4px #d9d9d9;
+        }
+
+        .voucher-item.modul-1{
+            background: linear-gradient(135deg, #ff2f2f, #fb5858);
+        }
+
+        .voucher-item.modul-2{
+            background: linear-gradient(135deg, #ffb330, #ffc846);
+        }
+        
+        .voucher-item:hover {
+            background: linear-gradient(135deg, #2ed93c, #63dd2b);
+            transform: translateY(-3px);
+        }
+        .voucher-item.modul-1:hover {
+            background: linear-gradient(135deg, #e72b2b, #df4f4f);
+            transform: translateY(-3px);
+        }
+        .voucher-item.modul-2:hover {
+            background: linear-gradient(135deg, #f1a82a, #edb83d);
+            transform: translateY(-3px);
+        }
+
+        .voucher-item:active {transform: scale(0.97);}
+        .voucher-item.modul-1:active {transform: scale(0.97);}
+        .voucher-item.modul-2:active {transform: scale(0.97);}
+
+        .voucher-content{
+            display: flex;
+            flex-direction: column;    
+        }
+
+        .voucher-text{
+            margin: 0 ;
+            color: #FFF;
+            font-size: 0.8rem;
+            font-weight: 400;
+        }
+
+        .voucher-code{
+            margin: 0 ;
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+        
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container">
+        <div class="screen">
+            <div class="status-bar">
+                <img src="photo/Status Bar.png" alt="Photo">
+            </div>
+            <div class="header">
+                <a href="main-manu.html" class="btn-back"><i class="fas fa-undo-alt"></i></a>
+            </div>
+
+
+
+            <h1>โค้ดส่วนลด</h1>
+
+            <div class="voucher-item">
+                <i class="fa-solid fa-ticket fa-2xl"></i>
+                <div class="voucher-content">
+                    <p class="voucher-text">ลดทันที 50% (สูงสุด 100.-) เมื่อสั่งครั้งแรก</p>
+                    <span class="voucher-code">โค้ด : MAHANAKON</span>
+                </div>
+            </div>
+
+            <div class="voucher-item modul-1">
+                <i class="fa-solid fa-ticket fa-2xl"></i>
+                <div class="voucher-content">
+                    <p class="voucher-text">ส่วนลด 30% เฉพาะช่วงเวลา14:00 - 16:00 น.</p>
+                    <span class="voucher-code">โค้ด : HAPPYNAKON</span>
+                </div>
+            </div>
+
+            <div class="voucher-item modul-2">
+                <i class="fa-solid fa-ticket fa-2xl"></i>
+                <div class="voucher-content">
+                    <p class="voucher-text">ลดเพิ่ม 100.- เมื่อสั่งครบ 500 บาทขึ้นไป</p>
+                    <span class="voucher-code">โค้ด : NAKONCOMBO</span>
+                </div>
+            </div>
+
+<!-- ==================== Footer ==================== -->
+            <footer>
+                <nav class="btn-nav">
+                    <!-- =========== nav =========== -->
+                    <a href="main-manu.html" class="nav-item"><i class="fas fa-home"></i></a>
+                    <a href="promotion.html" class="nav-item"><i class="fas fa-ticket-alt"></i></a> 
+                    <a href="favorites.html" class="nav-item"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="nav-item"><i class="fas fa-comments"></i></a>
+                </nav>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>

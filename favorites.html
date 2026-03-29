@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>favorites</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: "Kanit", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #434343;
+            line-height: 1.5;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .app-wrapper {
+            width: 390px;
+            height: 844px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            background-color: #FFFBF1;
+        }
+
+        /* 1. กรอบมือถือ */
+
+        /* 2. ส่วนหัว */
+        .header {
+            width: 100%;
+            box-sizing: border-box;  /* ไม่ให้ padding ดันจนล้นกรอบ */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 10px;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 26px;
+            color: #1A1A1A;
+        }
+        
+        .btn-back {
+            display: flex;
+            justify-content: start;
+            font-size: 22px;
+            color: #333;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .btn-back:hover {
+            transform: translateX(-5px) scale(1.1); /* เลื่อนไปทางซ้ายนิดๆ เหมือนบอกว่ากลับไป */
+            color: #FF7B00;
+        }
+
+        .status-bar img{
+            width: 390px;
+        }
+
+        /* 3. รายการอาหาร (List) */
+        .favorites-list {
+            flex: 1;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;  
+        }
+
+        /* การ์ดรายการอาหาร */
+        .food-item {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            box-shadow: 0 8px 20px rgba(157, 157, 157, 0.3);
+            background-color: #d5d5d5;
+            border-radius: 15px;
+            padding: 10px;
+            gap: 15px;
+            transition: transform 0.3s ease;
+        }
+        
+        .food-item:hover {
+            box-shadow: 0 8px 20px rgba(121, 121, 121, 0.3);
+            background-color: #c8c8c8;
+            transform: translateY(-3px);
+        }
+        
+        .food-item:active {
+            background-color: #aeaeae;
+            transform: scale(0.97);
+        }
+
+        .food-item img {
+            width: 80px;
+            height: 60px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .food-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .food-name { font-weight: 600; font-size: 14px; }
+        .food-price { font-size: 14px; color: #333; }
+
+        /* 4. แถบเมนูด้านล่าง  */
+        footer {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn-nav {
+            position: fixed;
+            bottom: 0;
+            width: 390px;
+            background-color: #6b422a;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        .nav-item {
+            color: #ffffff;
+            font-size: 28px;
+            text-decoration: none;
+            filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.6));
+            transition: transform 0.2s ease;
+        }
+
+        .nav-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .nav-item:active {
+            transform: scale(0.96);
+        }
+
+
+    
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="app-wrapper">
+            <div class="status-bar">
+                <img src="../img/status-barlight.png" alt="Photo">
+            </div>
+             <div class="header">
+                <a href="main-manu.html" class="btn-back"><i class="fas fa-undo-alt"></i></a>
+                <h1>เมนูโปรด</h1>
+            </div>
+            <div class="favorites-list">
+                
+                <div class="food-item">
+                    <img src="../img/burger6.png" alt="Crispy Gold Chicken">
+                    <div class="food-info">
+                        <div class="food-name">Crispy Gold Chicken</div>
+                        <div class="food-price">179.-</div>
+                    </div>
+                </div>
+
+                <div class="food-item">
+                    <img src="../img/burger7.png" alt="Premium Tower Burger">
+                    <div class="food-info">
+                        <div class="food-name">Premium Tower Burger</div>
+                        <div class="food-price">239.-</div>
+                    </div>
+                </div>
+
+                <div class="food-item">
+                    <img src="../img/burger4.png" alt="The Combo Feast">
+                    <div class="food-info">
+                        <div class="food-name">The Combo Feast</div>
+                        <div class="food-price">219.-</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<!-- ==================== Footer ==================== -->
+        <footer>
+            <nav class="btn-nav">
+                <!-- =========== nav =========== -->
+                <a href="main-manu.html" class="nav-item"><i class="fas fa-home"></i></a>
+                <a href="#" class="nav-item"><i class="fas fa-ticket-alt"></i></a> 
+                <a href="favorites.html" class="nav-item"><i class="fas fa-heart"></i></a>
+                <a href="#" class="nav-item"><i class="fas fa-comments"></i></a>
+            </nav>
+        </footer>
+    </div>
+    
+</body>
+</html>
